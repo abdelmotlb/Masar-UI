@@ -1,0 +1,314 @@
+.data-table-container {
+    width: calc(100% - 40px);
+    margin: 0 20px;
+    margin-bottom: 10px; 
+
+    direction: rtl;
+
+    font-family: "Cairo", sans-serif;
+
+    color: #f2f1ec;
+
+    margin-top: 20px;
+}
+
+
+/* ================================
+   TOOLBAR
+   ================================ */
+
+.data-table-toolbar {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: 14px;
+    margin-bottom: 16px;
+    /* border-bottom: 1px solid rgba(184, 138, 90, 0.2); */
+}
+
+
+.data-table-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    margin: 0;
+
+    font-family: "Amiri", serif;
+
+    font-size: 34px;
+
+    font-weight: 700;
+
+    color: #b88a5a;
+    line-height: 1.3;
+}
+
+
+/* ================================
+   CREATE BUTTON
+   ================================ */
+
+.data-table-create-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    width: fit-content;
+    flex-shrink: 0;
+
+    padding: 9px 25px;
+
+    border: 1px solid rgba(184, 138, 90, 0.45);
+    border-radius: 8px;
+
+    background: rgba(184, 138, 90, 0.10);
+    color: #b88a5a;
+
+    font-family: "Cairo", sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.15s ease;
+}
+
+.data-table-create-btn:hover {
+    background: rgba(184, 138, 90, 0.18);
+
+    border-color: #b88a5a;
+
+    transform: translateY(-1px);
+}
+
+
+.create-icon {
+    font-size: 20px;
+
+    line-height: 1;
+}
+
+
+/* ================================
+   TABLE WRAPPER
+   ================================ */
+
+.data-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid rgba(184, 138, 90, 0.15);
+
+    border-radius: 10px;
+
+    background: #0d1120;
+}
+
+
+/* ================================
+   TABLE
+   ================================ */
+
+.data-table {
+    width: 100%;
+
+    min-width: 800px;
+
+    border-collapse: collapse;
+
+    table-layout: fixed;
+
+    direction: rtl;
+}
+
+
+/* ================================
+   HEADER
+   ================================ */
+
+.data-table thead {
+    background: rgba(184, 138, 90, 0.08);
+}
+
+
+.data-table th {
+    height: 48px;
+
+    padding: 0 16px;
+
+    border-bottom: 1px solid rgba(184, 138, 90, 0.22);
+
+    color: #b88a5a;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+
+/* ================================
+   ROW
+   ================================ */
+
+.data-table-row {
+    height: 58px;
+
+    cursor: pointer;
+
+    transition: background 0.15s ease;
+}
+
+
+.data-table-row:not(:last-child) td {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+
+.data-table-row:hover {
+    background: rgba(184, 138, 90, 0.07);
+}
+
+
+.data-table td {
+    padding: 0 16px;
+
+    color: #d8d8d5;
+
+    font-size: 13px;
+
+    text-align: right;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ================================
+   EMPTY
+   ================================ */
+
+.data-table-empty {
+    height: 100px;
+
+    text-align: center !important;
+
+    color: #777b87 !important;
+}
+
+
+/* ================================
+   ACTIONS
+   ================================ */
+
+.data-table-actions-header {
+    width: 75px;
+
+    text-align: center !important;
+}
+
+
+.data-table-actions-cell {
+    width: 75px;
+
+    padding: 0 !important;
+
+    text-align: center !important;
+
+    cursor: default;
+}
+
+
+/* ================================
+   DELETE
+   ================================ */
+
+.data-table-delete-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    width: 32px;
+
+    height: 32px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: transparent;
+
+    color: #777b87;
+
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+
+.data-table-delete-btn:hover {
+    background: rgba(200, 70, 70, 0.12);
+
+    color: #d66b6b;
+}
+
+.data-table-empty-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    margin: 30px;
+}
+
+.data-table-load-button {
+    display: inline-block;
+    width: fit-content;
+    align-self: center;
+
+    padding: 6px 16px;
+    border: 1px solid #b88a5a;
+    border-radius: 6px;
+
+    background: transparent;
+    color: #b88a5a;
+
+    font-family: "Cairo", sans-serif;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.data-table-load-button:hover {
+    background-color: #b88a5a;
+    color: #090c18;
+    box-shadow: 0 0 10px rgba(184, 138, 90, 0.35);
+}
+
+.data-table-text {
+    font-size: large;
+}

@@ -1,0 +1,368 @@
+/* ===========================
+   Create File Modal
+=========================== */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(0, 0, 0, .65);
+    backdrop-filter: blur(4px);
+
+    z-index: 999;
+}
+
+.create-file-modal {
+
+    width: min(92vw, 650px);
+    max-height: 90vh;
+
+    overflow-y: auto;
+
+    background: #1d1d1d;
+
+    border: 1px solid #b88a5a;
+    border-radius: 18px;
+
+    padding: 20px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.5),
+        0 0 18px rgba(184,138,90,.18);
+
+    color: white;
+}
+
+.modal-header {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 28px;
+}
+
+.modal-header h2 {
+
+    margin: 0;
+
+    color: #d8b47a;
+
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.close-btn {
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 50%;
+    background: transparent;
+
+    color: #d8b47a;
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    flex-shrink: 0;
+
+    transition:
+        color .2s ease,
+        background-color .2s ease,
+        transform .2s ease,
+        box-shadow .2s ease;
+}
+
+.close-btn:hover,
+.close-btn:focus-visible {
+    color: white;
+    background: rgba(184, 138, 90, .18);
+    transform: rotate(90deg);
+    box-shadow: 0 0 16px rgba(184, 138, 90, .2);
+}
+
+.close-btn:focus-visible {
+    outline: 2px solid #d8b47a;
+    outline-offset: 2px;
+}
+
+.modal-body {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 30px;
+    margin: 32px 0px;
+}
+
+.create-file-form-group {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.create-file-form-group label {
+
+    color: #d8b47a;
+
+    font-weight: 600;
+
+    font-size: 18px;
+}
+
+.create-file-form-group textarea {
+
+    width: 100%;
+
+    min-height: 180px;
+    overflow-y: auto;
+
+    background: #2a2a2a;
+
+    color: white;
+
+    border: 1px solid #454545;
+    border-radius: 10px;
+    scrollbar-color: #b88a5a #181b24;
+    scrollbar-width: thin;
+
+    padding: 10px;
+
+    font-size: 16px;
+
+    font-family: inherit;
+
+    resize: vertical;
+
+    box-sizing: border-box;
+}
+
+.create-file-form-group textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+.create-file-form-group textarea::-webkit-scrollbar-track {
+    background: #181b24;
+    border-radius: 10px;
+}
+
+.create-file-form-group textarea::-webkit-scrollbar-thumb {
+    background: #8a6b4b;
+    border: 2px solid #181b24;
+    border-radius: 10px;
+}
+
+.create-file-form-group textarea::-webkit-scrollbar-thumb:hover {
+    background: #b88a5a;
+}
+
+.create-file-form-group textarea:focus {
+
+    outline: none;
+
+    border-color: #b88a5a;
+}
+
+.modal-note {
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 18px;
+
+    background: rgba(184,138,90,.08);
+
+    border: 1px solid rgba(184,138,90,.25);
+
+    border-radius: 12px;
+
+    color: white;
+
+    line-height: 1.8;
+}
+
+.note-icon {
+
+    color: #d8b47a;
+
+    font-size: 28px;
+
+    flex-shrink: 0;
+}
+
+.modal-note strong {
+
+    color: #d8b47a;
+}
+
+.modal-footer {
+
+    display: flex;
+
+    gap: 16px;
+
+    margin-top: 32px;
+}
+
+.modal-footer button {
+
+    flex: 1;
+}
+
+.create-btn {
+
+    padding: 14px;
+
+    background: #b88a5a;
+
+    color: #111;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.create-btn:hover {
+
+    background: #d6aa70;
+}
+
+.cancel-btn {
+
+    padding: 14px;
+
+    background: transparent;
+
+    color: #d8b47a;
+
+    border: 1px solid #b88a5a;
+
+    border-radius: 10px;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .25s;
+}
+
+.cancel-btn:hover {
+
+    background: rgba(184,138,90,.08);
+}
+
+
+/* ===========================
+   Follow / Checkbox
+=========================== */
+
+.follow-up-option {
+    margin-top: 4px;
+    height: 20px;
+}
+
+.follow-up-option label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    gap: 12px;
+
+    color: #d8b47a;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    user-select: none;
+}
+
+.follow-up-option input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+
+    width: 22px;
+    height: 22px;
+
+    margin: 0;
+
+    background: #2a2a2a;
+
+    border: 2px solid #b88a5a;
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition: .2s;
+}
+
+/* Hover */
+
+.follow-up-option input[type="checkbox"]:hover {
+    border-color: #d6aa70;
+
+    box-shadow:
+        0 0 8px rgba(184, 138, 90, .25);
+}
+
+/* Checked */
+
+.follow-up-option input[type="checkbox"]:checked {
+    background: #b88a5a;
+
+    border-color: #b88a5a;
+}
+
+/* Check mark */
+
+.follow-up-option input[type="checkbox"]:checked::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 7px;
+    height: 13px;
+    border: solid #111;
+    border-width: 0 2px 2px 0;
+    transform: translate(-50%, -55%) rotate(45deg);
+}
+/* Keyboard focus */
+
+.follow-up-option input[type="checkbox"]:focus-visible {
+    outline: none;
+
+    box-shadow:
+        0 0 0 3px rgba(184, 138, 90, .2);
+}

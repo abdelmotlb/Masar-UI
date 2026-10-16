@@ -1,0 +1,537 @@
+.mail-file-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+    margin-top: 2.5%;
+}
+
+
+/* ===========================
+   Action Panel
+=========================== */
+
+.action-panel {
+    width: min(470px, 100%);
+
+    padding: 24px;
+
+    background: #1f1b1d;
+
+    border-radius: 28px;
+
+    border: 2px solid #8f693f;
+
+    box-shadow:
+        0 0 12px rgba(184, 138, 90, 0.18),
+        0 0 25px rgba(184, 138, 90, 0.08);
+
+    color: white;
+}
+
+
+/* ===========================
+   Header
+=========================== */
+
+.action-header {
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+}
+
+.action-icon {
+    width: 40px;
+    height: 40px;
+
+    min-width: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    font-size: 19px;
+    font-weight: bold;
+
+    color: white;
+
+    background: linear-gradient(
+        135deg,
+        #a3a3a3,
+        #050505
+    );
+
+    box-shadow:
+        0 0 12px rgba(110, 110, 110, 0.25);
+}
+
+.action-title {
+    font-size: 19px;
+    font-weight: 700;
+}
+
+
+/* ===========================
+   Divider
+=========================== */
+
+.divider {
+    height: 1px;
+
+    margin: 12px 0;
+
+    background: rgba(255, 255, 255, 0.07);
+}
+
+
+/* ===========================
+   Add Procedure
+=========================== */
+
+.add-procedure-row {
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 11px 14px;
+
+    border: 1px dashed rgba(184, 138, 90, 0.55);
+
+    border-radius: 12px;
+
+    background: transparent;
+
+    color: #b88a5a;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+.add-procedure-row:hover {
+    background: rgba(184, 138, 90, 0.07);
+
+    border-color: #b88a5a;
+
+    box-shadow:
+        0 0 12px rgba(184, 138, 90, 0.12);
+}
+
+.add-icon {
+    font-size: 20px;
+    line-height: 1;
+}
+
+
+/* ===========================
+   Procedure Row
+=========================== */
+
+.procedure-row {
+    min-height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 10px;
+
+    border-radius: 14px;
+
+    border: 1px solid transparent;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+}
+
+.procedure-row:hover {
+    background: rgba(255, 255, 255, 0.025);
+}
+
+
+/* ===========================
+   Dirty Procedure
+=========================== */
+
+.procedure-row.dirty {
+    border-color: rgba(184, 138, 90, 0.35);
+
+    background: rgba(184, 138, 90, 0.025);
+}
+
+
+/* ===========================
+   Editing Procedure
+=========================== */
+
+.procedure-row.editing {
+    background: rgba(255, 255, 255, 0.025);
+
+    border-color: rgba(184, 138, 90, 0.25);
+}
+
+
+/* ===========================
+   Procedure Number
+=========================== */
+
+.procedure-index,
+.procedure-add-icon {
+    width: 34px;
+    height: 34px;
+
+    min-width: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: #262224;
+
+    border: 1px solid rgba(184, 138, 90, 0.35);
+
+    color: #b88a5a;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.procedure-add-icon {
+    font-size: 20px;
+}
+
+
+/* ===========================
+   Procedure Content
+=========================== */
+
+.procedure-content {
+    flex: 1;
+
+    min-width: 0;
+
+    text-align: right;
+
+    cursor: text;
+
+    overflow-wrap: anywhere;
+}
+
+
+/* ===========================
+   Procedure Text - View
+=========================== */
+
+.procedure-text {
+    display: block;
+
+    color: #e8e8e8;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    white-space: normal;
+
+    overflow-wrap: anywhere;
+
+    word-break: break-word;
+}
+
+
+/* ===========================
+   Procedure Textarea - Edit
+=========================== */
+
+.procedure-content textarea {
+    display: block;
+
+    width: 100%;
+
+    min-height: 38px;
+
+    padding: 5px 4px;
+
+    resize: none;
+
+    overflow: hidden;
+
+    border: none;
+
+    outline: none;
+
+    border-bottom: 1px solid #b88a5a;
+
+    background: transparent;
+
+    color: #f2f1ec;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    text-align: right;
+
+    direction: rtl;
+}
+
+.procedure-content textarea::placeholder {
+    color: #777;
+}
+
+
+/* ===========================
+   Procedure Actions
+=========================== */
+
+.procedure-actions {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    flex-shrink: 0;
+}
+
+
+/* ===========================
+   Procedure Action Button
+=========================== */
+
+.procedure-action {
+    width: 32px;
+    height: 32px;
+
+    min-width: 32px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: #262224;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+.procedure-action svg {
+    width: 17px;
+    height: 17px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+
+/* ===========================
+   Document Button
+=========================== */
+
+.document-action {
+    color: #b88a5a;
+    justify-content: center;
+
+}
+
+.document-action:hover {
+    background: rgba(184, 138, 90, 0.12);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 0 10px rgba(184, 138, 90, 0.12);
+}
+
+
+/* ===========================
+   Delete Button
+=========================== */
+
+.delete-action {
+    color: #c87984;
+}
+
+.delete-action:hover {
+    background: rgba(255, 93, 115, 0.10);
+
+    color: #e08b95;
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 0 10px rgba(255, 93, 115, 0.08);
+}
+
+
+/* ===========================
+   Adding Row
+=========================== */
+
+.procedure-row.adding {
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.025);
+
+    border-radius: 14px;
+}
+
+.procedure-row.adding .procedure-content {
+    cursor: default;
+}
+
+
+/* ===========================
+   Cancel Button
+=========================== */
+
+.cancel-btn {
+    min-width: 34px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 0;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background: rgba(255, 93, 115, 0.08);
+
+    color: #d9828d;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        color 0.2s,
+        transform 0.2s;
+}
+
+.cancel-btn:hover {
+    background: rgba(255, 93, 115, 0.18);
+
+    color: #e08b95;
+
+    transform: translateY(-1px);
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 600px) {
+
+    .mail-file-card {
+        padding: 20px;
+    }
+
+    .action-panel {
+        width: 100%;
+
+        padding: 20px;
+
+        border-radius: 22px;
+    }
+
+    .procedure-row {
+        gap: 8px;
+
+        padding: 9px 6px;
+    }
+
+    .procedure-actions {
+        gap: 3px;
+    }
+
+    .procedure-action {
+        width: 30px;
+        height: 30px;
+
+        min-width: 30px;
+    }
+
+    .procedure-action svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .procedure-index,
+    .procedure-add-icon {
+        width: 32px;
+        height: 32px;
+
+        min-width: 32px;
+    }
+
+    .action-panel {
+        padding: 18px;
+    }
+}
+.confirm-action {
+    color: #b88a5a;
+    border: 1px solid #51453b;
+}
+
+.confirm-action:hover:not(:disabled) {
+    background: rgba(184, 138, 90, 0.14);
+    color: #d4af37;
+    transform: translateY(-1px);
+    box-shadow: 0 0 10px rgba(184, 138, 90, 0.14);
+}
+
+.confirm-action:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+    background: #262224;
+    color: #777;
+    transform: none;
+    box-shadow: none;
+}

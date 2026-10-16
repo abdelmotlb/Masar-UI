@@ -1,0 +1,455 @@
+
+
+/* ===========================
+   PAGE
+=========================== */
+
+.page-container {
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: radial-gradient(ellipse at 50% 45%, #10192b 0%, #080d1a 72%);
+}
+
+/* ===========================
+   LOGIN CARD
+=========================== */
+
+.login-container {
+  width: 950px;
+  max-width: 95%;
+  height: 520px;
+
+  display: flex;
+  overflow: hidden;
+
+  background: #181b24;
+
+  border: 1px solid #353b47;
+  border-radius: 16px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65), 0 0 30px rgba(184, 138, 90, 0.08);
+}
+
+/* ===========================
+   LEFT IMAGE
+=========================== */
+
+.login-image {
+  flex: 1;
+
+  background: linear-gradient(rgba(8, 10, 18, 0.4), rgba(8, 10, 18, 0.4)),
+    url('../../assets/imgs/files.png');
+
+  background-position: center;
+  background-size: cover;
+}
+
+/* ===========================
+   FORM
+=========================== */
+
+.login-form {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding: 55px;
+
+  background: #22252f;
+
+  color: #f2f1ec;
+
+  direction: rtl;
+}
+
+/* ===========================
+   TITLE
+=========================== */
+
+.login-form h2 {
+  text-align: center;
+
+  margin-bottom: 40px;
+
+  font-size: 34px;
+
+  font-weight: 700;
+
+  color: #b88a5a;
+
+  letter-spacing: 0.5px;
+}
+
+/* ===========================
+   GROUP
+=========================== */
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+/* ===========================
+   LABEL
+=========================== */
+
+label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #afb5c4;
+
+  font-size: 15px;
+
+  font-weight: 600;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+input {
+  width: 100%;
+
+  padding: 14px 16px;
+
+  background: #2e323d;
+
+  border: 1px solid #474d5a;
+
+  border-radius: 8px;
+
+  color: white;
+
+  font-size: 15px;
+
+  transition: 0.25s;
+}
+
+input::placeholder {
+  color: #8c909a;
+}
+
+input:focus {
+  outline: none;
+
+  background: #363b47;
+
+  border-color: #b88a5a;
+
+  box-shadow: 0 0 10px rgba(184, 138, 90, 0.35);
+}
+
+.login-input-wrapper {
+  position: relative;
+}
+
+.login-input-wrapper input {
+  padding-right: 44px;
+}
+
+.login-input-icon {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+
+  width: 17px;
+  height: 17px;
+
+  fill: none;
+  stroke: #aeb5c5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+
+/* ===========================
+   login-button
+=========================== */
+
+.login-button {
+
+  width: 100%;
+
+  padding: 15px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #b88a5a;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.login-button:hover {
+  background: #c99967;
+
+  transform: translateY(-2px);
+
+  box-shadow: 0 8px 20px rgba(184, 138, 90, 0.35);
+}
+
+.login-button:active {
+  transform: translateY(0);
+
+  background: #8a633d;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+  .login-container {
+    flex-direction: column;
+
+    width: 95%;
+
+    height: auto;
+  }
+
+  .login-image {
+    height: 220px;
+  }
+
+  .login-form {
+    padding: 35px;
+  }
+}
+
+
+
+/* ===========================
+   PROJECT NAME — DIAGONAL RIBBON
+=========================== */
+
+.project-ribbon {
+    position: fixed;
+    top: 35px;
+    left: -58px;
+    width: 235px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: rotate(-45deg);
+    transform-origin: center;
+
+    background: rgba(184, 138, 90, 0.12);
+    border-top: 1px solid rgba(184, 138, 90, 0.35);
+    border-bottom: 1px solid rgba(184, 138, 90, 0.35);
+
+    color: rgba(212, 175, 122, 0.85);
+    font-family: 'Cairo', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    z-index: 1001;
+    pointer-events: none;
+    user-select: none;
+}
+
+.project-ribbon span {
+    text-shadow: 0 0 12px rgba(184, 138, 90, 0.12);
+}
+
+@media (max-width: 600px) {
+    .project-ribbon {
+        top: 27px;
+        left: -68px;
+        width: 210px;
+        height: 38px;
+        font-size: 15px;
+    }
+}
+
+
+/* Top-left Brand Ribbon */
+.project-ribbon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 5;
+    padding: 10px;
+
+    width: 350px;
+    height: 210px;
+
+    background: transparent;
+    border: none;
+    clip-path: none;
+    pointer-events: none;
+
+    /* Prevent the component itself from being rotated */
+    transform: none !important;
+    rotate: none !important;
+}
+
+/* Slanted background only */
+.project-ribbon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(ellipse at 100% 0%, rgba(246, 186, 105, 0.42), transparent 42%),
+        linear-gradient(135deg, #17130f 0%, #302317 55%, #885628 100%);
+
+    clip-path: polygon(0 0, 100% 0, 0 100%);
+
+    transform: none;
+}
+
+.project-ribbon::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background: #d8a15f;
+
+    clip-path: polygon(
+        0 98.8%,
+        0 100%,
+        100% 0,
+        98.8% 0
+    );
+    filter: drop-shadow(0 0 4px rgba(255, 190, 105, 0.95))
+        drop-shadow(0 0 9px rgba(255, 166, 65, 0.58));
+}
+
+
+/* Horizontal, upright text */
+.project-ribbon-content {
+    position: absolute;
+    top: 20px;
+    left: 12px;
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+
+    width: 166px;
+    padding: 6px 12px 8px;
+    direction: rtl;
+    text-align: center;
+
+    writing-mode: horizontal-tb;
+    transform: rotate(0deg) !important;
+    rotate: 0deg !important;
+}
+
+.project-ribbon-name,
+.project-ribbon-description {
+    transform: rotate(0deg) !important;
+    rotate: 0deg !important;
+    writing-mode: horizontal-tb;
+}
+
+.project-ribbon-name {
+    font-family: "Amiri", serif;
+    font-size: 46px;
+    font-weight: 700;
+    line-height: 1.25;
+    white-space: nowrap;
+}
+
+.project-ribbon-description {
+    font-family: "Cairo", sans-serif;
+    font-size: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.about-icon {
+    position: fixed;
+    bottom: 54px;
+    left: 38px;
+    z-index: 2;
+
+    display: grid;
+    width: 52px;
+    height: 52px;
+    place-items: center;
+    padding: 0;
+
+    background: transparent;
+    border: 1px solid rgba(216, 161, 95, 0.75);
+    border-radius: 50%;
+    color: #e0ad6e;
+    cursor: pointer;
+    box-shadow: 0 0 22px rgba(216, 161, 95, 0.22);
+    transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+.about-icon:hover,
+.about-icon:focus-visible {
+    background: rgba(216, 161, 95, 0.12);
+    box-shadow: 0 0 26px rgba(216, 161, 95, 0.38);
+}
+
+.about-icon:focus-visible {
+    outline: 2px solid #e0ad6e;
+    outline-offset: 3px;
+}
+
+.about-icon svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .project-ribbon {
+        width: 245px;
+        height: 150px;
+    }
+
+    .project-ribbon-content {
+        top: 12px;
+        left: 12px;
+        width: 140px;
+    }
+
+    .project-ribbon-name {
+        font-size: 40px;
+    }
+
+    .project-ribbon-description {
+        font-size: 9px;
+    }
+
+    .about-icon {
+        bottom: 24px;
+        left: 24px;
+    }
+}

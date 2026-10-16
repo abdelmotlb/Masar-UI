@@ -1,0 +1,184 @@
+/* ===========================
+   Main Layout
+=========================== */
+
+.file-summary {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr auto;
+    gap: 24px;
+
+    align-items: center;
+}
+
+/* ===========================
+   Common Items
+=========================== */
+
+.summary-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.label {
+    color: #b88a5a;
+    font-weight: 700;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.value {
+    color: #f5f5f5;
+    font-size: 1rem;
+}
+
+/* ===========================
+   File Number Card
+=========================== */
+
+.file-number {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px 18px;
+
+    background: linear-gradient(
+        180deg,
+        #2b303b,
+        #242932
+    );
+
+    border: 1px solid #b88a5a;
+    border-radius: 100px;
+}
+
+.file-number .label {
+    color: #b88a5a;
+    font-size: .8rem;
+}
+
+.file-number .value {
+    color: #b88a5a;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+
+/* ===========================
+   Status + Pinned
+=========================== */
+
+.status-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.status {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 70px;
+
+    padding: 4px 12px;
+
+    border-radius: 20px;
+
+    font-size: .85rem;
+    font-weight: 700;
+}
+
+.status.open {
+    background: rgba(9, 238, 93, 0.18);
+    color: #4ade80;
+}
+
+.status.closed {
+    background: rgba(160,160,160,.15);
+    color: #d0d0d0;
+    border: 1px solid #7a7a7a;
+}
+
+.status.pinned {
+    background: rgba(9, 238, 93, 0.18);
+    color: #4ade80;
+}
+
+.status.not-pinned {
+    background: rgba(160,160,160,.15);
+    color: #d0d0d0;
+    border: 1px solid #7a7a7a;
+}
+
+/* ===========================
+   Subject
+=========================== */
+
+.subject {
+    align-items: flex-start;
+}
+
+.subject .value {
+    line-height: 1.6;
+    word-break: break-word;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 900px) {
+    .file-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .file-number {
+        justify-self: center;
+    }
+}
+
+/* Push the edit button to the left */
+.edit-file-button {
+    width: fit-content;
+    height: fit-content;
+    margin-right: auto;
+    padding: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    /* padding: 7px 14px; */
+
+    border: 1px solid #343945;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #f2f1ec;
+
+    font-family: inherit;
+    font-size: 14px;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease;
+}
+
+.edit-file-button:hover {
+    background-color: #252936;
+    border-color: #b88a5a;
+    color: #b88a5a;
+}
+
+.edit-icon {
+    font-size: 17px;
+    line-height: 1;
+}

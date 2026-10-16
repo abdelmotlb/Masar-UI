@@ -1,0 +1,525 @@
+.mail-file-card {
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+
+    padding: 10px;
+    margin: 0px;
+    /* min-height: calc(100vh); */
+}
+
+
+/* =========================
+   Main card
+========================= */
+
+.mail-sheet {
+    position: relative;
+
+    width: min(400px, 100%);
+
+    border-radius: 22px;
+
+    background: #1f1b1d;
+
+    border: 2px solid transparent;
+
+    background-image:
+        linear-gradient(#1f1b1d, #1f1b1d),
+        linear-gradient(
+            135deg,
+            #b88a5a,
+            #8f693f,
+            #b88a5a
+        );
+
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+
+    box-shadow:
+        0 0 10px rgba(184, 138, 90, 0.18),
+        0 0 22px rgba(184, 138, 90, 0.08);
+
+    padding: 22px;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+.mail-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    color: #f2f1ec;
+
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.mail-icon {
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #77716c,
+        #292626
+    );
+
+    color: #f2f1ec;
+
+    font-size: 17px;
+}
+
+
+/* =========================
+   Divider
+========================= */
+
+.divider {
+    margin: 14px 0;
+
+    height: 1px;
+
+    background: #3a3637;
+}
+
+
+/* =========================
+   Authority
+========================= */
+
+.authority-section {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+}
+
+.authority-section .field {
+    width: 100%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 6px;
+
+    padding: 0 45px; /* reserve space around the button */
+    box-sizing: border-box;
+}
+
+.authority-section .editable-value {
+    max-width: 100%;
+    box-sizing: border-box;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+
+    font-size: 13px;
+}
+
+.authority-section .document-button {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.authority-section .document-button:hover {
+    transform: translateY(-51%);
+}
+
+/* =========================
+   General fields
+========================= */
+
+.field {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 6px;
+}
+
+.field label {
+    color: #77716d;
+
+    font-size: 14px;
+}
+
+.editable-value {
+    color: #eeeae5;
+
+    font-size: 14px;
+
+    cursor: pointer;
+
+    padding: 3px 7px;
+
+    border-radius: 6px;
+
+    transition:
+        background 0.15s ease,
+        color 0.15s ease;
+}
+
+.editable-value:hover {
+    background: rgba(184, 138, 90, 0.08);
+
+    color: #c69a6d;
+}
+
+
+/* =========================
+   Document button
+========================= */
+
+.document-button {
+    width: 34px;
+    height: 34px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+    margin: 0;
+
+    border: 1px solid #51453b;
+
+    border-radius: 9px;
+
+    background: #242021;
+
+    color: #b88a5a;
+
+    cursor: pointer;
+
+    transition:
+        background 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        transform 0.15s ease;
+}
+
+.document-button svg {
+    width: 17px;
+    height: 17px;
+
+    fill: none;
+
+    stroke: currentColor;
+
+    stroke-width: 1.6;
+
+    stroke-linecap: round;
+
+    stroke-linejoin: round;
+}
+
+.document-button:hover {
+    background: rgba(184, 138, 90, 0.10);
+
+    border-color: #b88a5a;
+
+    color: #c69a6d;
+
+    transform: translateY(-1px);
+}
+
+.document-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================
+   Inputs
+========================= */
+
+.editable-value + input,
+.field > input {
+    box-sizing: border-box;
+
+    width: 100%;
+
+    border: 1px solid rgba(184, 138, 90, 0.45);
+
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #181516;
+
+    color: #f2f1ec;
+
+    padding: 6px 8px;
+
+    text-align: center;
+
+    font-family: inherit;
+
+    font-size: 13px;
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.editable-value + input:focus,
+.field > input:focus {
+    border-color: #b88a5a;
+
+    box-shadow:
+        0 0 0 2px rgba(184, 138, 90, 0.08);
+}
+
+
+/* =========================
+   Numbers
+========================= */
+
+.numbers {
+    display: flex;
+
+    gap: 14px;
+
+    margin-top: 16px;
+}
+
+.number-card {
+    flex: 1;
+
+    background: #1b1819;
+
+    border-radius: 12px;
+
+    padding: 11px;
+
+    border: 1px solid rgba(255, 255, 255, 0.045);
+
+    text-align: center;
+
+    direction: rtl;
+}
+
+.number-card input {
+    display: block;
+
+    width: 100%;
+    height: 32px;
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0 6px;
+
+    text-align: center;
+
+    border: 1px solid rgba(184, 138, 90, 0.45);
+    border-radius: 7px;
+
+    background: #181516;
+    color: #d0a06e;
+
+    outline: none;
+
+    font-family: inherit;
+    font-size: 23px;
+    font-weight: 800;
+
+    line-height: 32px;
+}
+
+.number-card > small {
+    display: block;
+
+    color: #77716d;
+
+    margin-bottom: 7px;
+
+    font-size: 11px;
+}
+
+
+/* Number */
+
+.number-card > .editable-value {
+    display: block;
+
+    width: 100%;
+    height: 32px;
+
+    box-sizing: border-box;
+
+    padding: 0 6px;
+
+    line-height: 32px;
+
+    font-size: 23px;
+    font-weight: 800;
+
+    color: #d0a06e;
+
+    background: none;
+
+    -webkit-text-fill-color: initial;
+}
+
+.number-card > .editable-value:hover {
+    color: #c69a6d;
+
+    background: rgba(184, 138, 90, 0.06);
+}
+
+
+/* =========================
+   Date
+========================= */
+
+.date-row {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+
+    margin-top: 10px;
+
+    padding-top: 9px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.045);
+}
+
+.date-row small {
+    color: #6f6965;
+
+    font-size: 11px;
+}
+
+.date-row .editable-value {
+    color: #bcb6b0;
+
+    font-size: 14px;
+}
+
+.date-row input {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    padding: 5px;
+
+    border-radius: 6px;
+
+    border: 1px solid rgba(184, 138, 90, 0.35);
+
+    background: #181516;
+
+    color: #ddd7d0;
+
+    outline: none;
+
+    font-family: inherit;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   Date input browser icon
+========================= */
+
+.date-row input::-webkit-calendar-picker-indicator {
+    filter: invert(65%) sepia(15%) saturate(700%);
+
+    opacity: 0.7;
+
+    cursor: pointer;
+}
+
+.editable-field-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.editable-field-container input {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    height: 32px;
+
+    border: 1px solid rgba(184, 138, 90, 0.45);
+    border-radius: 7px;
+
+    outline: none;
+    background: #181516;
+    color: #f2f1ec;
+
+    padding: 6px 8px;
+    text-align: center;
+
+    font-family: inherit;
+    /* font-size: 18px; */
+
+    transition:
+        border-color 0.15s ease,
+        box-shadow 0.15s ease;
+}
+
+.editable-field-container input:focus {
+    border-color: #b88a5a;
+    /* box-shadow:
+        0 0 0 2px rgba(173, 132, 87, 0.08); */
+}
+
+.field-save-button {
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    padding: 0;
+    border: 1px solid rgba(184, 138, 90, 0.45);
+    border-radius: 6px;
+    background: #242021;
+    color: #b88a5a;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.field-save-button:hover:not(:disabled) {
+    background: rgba(184, 138, 90, 0.10);
+    border-color: #b88a5a;
+    color: #c69a6d;
+}
+
+.field-save-button:disabled {
+    opacity: 0.4;
+    cursor: default;
+}

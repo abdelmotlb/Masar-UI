@@ -1,0 +1,35 @@
+.form-row {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+}
+
+.form-row .form-group {
+    flex: 1;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.form-group input[type="date"] {
+    direction: ltr;
+    text-align: right;
+}
+.modal-header {
+    margin-bottom: 10px;
+}
+.modal-footer {
+    margin-top: 0;
+}
+
+/* On small screens, stack the fields */
+@media (max-width: 600px) {
+    .form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
+

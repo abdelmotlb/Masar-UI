@@ -1,0 +1,100 @@
+.mail-page {
+    display: grid;
+
+    grid-template-rows: 1fr 10fr 1fr;
+
+    flex: 1;
+    min-height: 0;
+
+    gap: 8px;
+
+    overflow: hidden;
+}
+
+/* =========================
+   THREE-COLUMN CONTENT
+   ========================= */
+
+.exchange-content {
+    display: grid;
+    grid-template-columns: 1fr 0.3fr 1fr;
+
+    gap: 30px;
+
+    align-items: center;
+    min-height: 0;
+    margin-top: 0;
+}
+
+
+/* =========================
+   NAVIGATION ROWS
+   ========================= */
+
+.exchange-navigation-row {
+    display: flex;
+    justify-content: center;
+}
+
+.exchange-navigation-up {
+    align-items: flex-end;
+}
+
+.exchange-navigation-down {
+    align-items: flex-start;
+}
+
+
+/* =========================
+   NAVIGATION BUTTON
+   ========================= */
+
+.exchange-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    width: fit-content;
+    padding: 6px 18px;
+    margin: 0px;
+    border: 1px solid #343945;
+    border-radius: 999px;
+
+    background: #181b24;
+    color: #9296a3;
+
+    font-family: inherit;
+    font-size: 13px;
+
+    cursor: pointer;
+
+    transition:
+        color 0.2s ease,
+        border-color 0.2s ease,
+        background 0.2s ease;
+}
+
+.exchange-navigation:hover {
+    color: #f2f1ec;
+    border-color: #b88a5a;
+    background: #20232d;
+}
+
+.exchange-navigation-arrow {
+    color: #b88a5a;
+    font-size: 18px;
+    line-height: 1;
+}
+
+.exchange-navigation:disabled {
+    cursor: not-allowed;
+    opacity: 0.4;
+}
+
+.exchange-navigation:disabled:hover {
+    /* Override your normal hover styles */
+    background: transparent;
+    transform: none;
+    box-shadow: none;
+}
